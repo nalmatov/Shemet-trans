@@ -1,0 +1,22 @@
+.tag {
+  width: min-content;
+
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  padding: 10px;
+  border: 1px solid #E1E1E6;
+  border-radius: 3px;
+}
+
+.label {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--gray-1);
+
+  white-space: nowrap;
+}

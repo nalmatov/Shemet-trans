@@ -1,0 +1,227 @@
+.aboutUs {
+  margin-bottom: 130px;
+}
+
+.aboutUsInner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.text {
+  display: grid;
+  row-gap: 24px;
+
+  z-index: 2;
+}
+
+.description {
+  width: 448px;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+
+  white-space: pre-wrap;
+}
+
+.location {
+  width: auto;
+  height: 100%;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.locationInner {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+}
+
+.map {
+  position: absolute;
+
+  top: -153px;
+  right: -50px;
+
+}
+
+.mark {
+  display: flex;
+  position: absolute;
+
+  right: 66px;
+  bottom: 68px;
+
+  z-index: 2;
+}
+
+.mark_text {
+  padding: 9.5px 20px 9.5px 22px;
+  margin-left: -4px;
+
+  border: 1px solid var(--gray-2);
+  border-radius: 5px;
+  background: var(--white-1);
+
+  z-index: 2;
+}
+
+.mark_description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  white-space: pre-wrap;
+
+  color: var(--gray-1);
+}
+
+.check {
+  width: 72px;
+  height: 70px;
+
+  display: grid;
+  place-content: center;
+
+  border-radius: 5px;
+  background: var(--gradient-blue-clr);
+
+  z-index: 3;
+}
+
+.checkIcon {
+  display: none;
+}
+
+.counters {
+  display: none;
+
+  z-index: 3;
+
+  & li:not(:last-child) .counter {
+    border-bottom: .55px solid var(--gray-2);
+  }
+
+  .counter {
+    padding-bottom: 12px;
+
+    .countTitle {
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 65px;
+      letter-spacing: 0%;
+    }
+  
+    .countLabel {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
+  }
+}
+
+@include tablet {
+  .map {
+    right: -30px;
+  }
+
+  .description {
+    width: 264px;
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .aboutUsInner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mark,
+  .location,
+  .locationInner {
+    position: static;
+  }
+
+  .description {
+    width: 80%;
+    text-align: start;
+  }
+
+  .mark {
+    margin-top: 24px;
+  }
+}
+
+@include mobile {
+  .title {
+    font-weight: 400;
+    font-size: 48px;
+  }
+
+  .description {
+    width: 96%;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -2%;
+
+    margin-bottom: 37px;
+  }
+
+  .map {
+    width: calc(100vw - 10px);
+    top: 100%;
+    right: -17px;
+  }
+
+  .check {
+    display: none;
+  }
+
+  .checkIcon {
+    display: block;
+  }
+  
+  .mark_text {
+    width: 236px;
+    padding: 10px;
+
+    border: 0.37px solid var(--gray-2);
+    border-radius: 1px;
+    
+    & p {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 110.00000000000001%;
+      letter-spacing: -1%;
+      color: var(--main-blue-clr);
+      white-space: initial;
+
+      margin-top: 9px;
+    }
+  }
+
+  .counters {
+    display: block;
+  }
+
+  .aboutUs {
+    margin-bottom: 100px;
+  }
+}

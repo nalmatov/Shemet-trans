@@ -1,0 +1,33 @@
+.burger {
+  cursor: pointer;
+
+  width: 37px;
+  height: 16px;
+  position: relative;
+
+  border: none;
+  background: none;
+}
+
+.burgerDivider {
+  width: 100%;
+  position: absolute;
+
+  left: 0;
+
+  border-top: 2px solid #1D1DD2;
+}
+
+.burgerDivider:first-child {
+  top: 0;
+
+}
+
+.burgerDivider:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burgerDivider:last-child {
+  bottom: 0;
+}

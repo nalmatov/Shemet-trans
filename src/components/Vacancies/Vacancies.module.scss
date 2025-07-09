@@ -1,0 +1,176 @@
+.vacancies {
+  margin-bottom: 130px;
+
+  & > .cards {
+    grid-template-rows: repeat(2, 194px);
+  }
+}
+
+.title {
+  margin-bottom: 34px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5px;
+  border: 1px solid var(--gray-2);
+}
+
+.welcomeCard {
+  position: relative;
+  background: url('../../assets/images/vacancies.png') no-repeat center / cover;
+  border-radius: 5px;
+  overflow: hidden;
+
+  & .shadow {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #05063a8a;
+  }
+
+  & .button {
+    width: max-content;
+  }
+}
+
+.shadow, .card {
+  display: flex;
+
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 20px;
+}
+
+.description {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  white-space: pre-wrap;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -2.5%;
+
+  white-space: pre-wrap;
+  color: var(--white-1);
+
+  text-transform: uppercase;
+}
+
+.lastCard {
+  border: none;
+  background: var(--gradient-blue-clr);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.contactsItem a {
+  display: flex;
+  column-gap: 12px;
+}
+
+.contactsItem * {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--white-1);
+}
+
+.dots {
+  display: flex;
+  column-gap: 3px;
+}
+
+.dot, .undot {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+}
+
+.dot {
+  background: var(--gradient-blue-clr);
+}
+
+.undot {
+  background: var(--gray-2);
+}
+
+@include tablet {
+  .cards {
+    display: flex;
+    flex-direction: column;
+
+    .card {
+      height: 124px;
+    }
+  }
+
+  .cards .lastCard,
+  .welcomeCard {
+    height: 174px;
+  }
+
+  .welcomeCard {
+    order: 3;
+  }
+
+  .lastCard {
+    order: 4;
+  }
+}
+
+@include mobile {
+  .title {
+    font-weight: 400 !important;
+    font-size: 48px !important;
+    line-height: 100% !important;
+
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .lastCard {
+    background: var(--main-blue-clr);
+  }
+
+  .cardTitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -2.5%;
+  }
+
+  .contactsItem a {
+    flex-direction: column;
+  }
+}

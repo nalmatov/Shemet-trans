@@ -1,0 +1,160 @@
+.calculate {
+  margin-bottom: 167px;
+
+  .wrapper {
+    width: 100%;
+
+    padding: 90px 0;
+
+    background: var(--gradient-blue-clr);
+  }
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  margin-bottom: 24px;
+
+  .title {
+    text-align: center;
+    line-height: 70px;
+    color: var(--white-1);
+  }
+
+  .descipription {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    white-space: pre-wrap;
+    color: var(--white-1);
+  }
+}
+
+.form {
+  max-width: 540px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin: 0 auto;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+
+.email {
+  width: 100%;
+  height: 37px;
+
+  padding: 10px;
+  border: none;
+  border-radius: 1px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+
+  & span {
+    font-weight: 500;
+    font-size: 13.92px;
+    line-height: 120%;
+    color: var(--white-1);
+    margin-bottom: 8px;
+  }
+}
+
+.message {
+  min-height: 106px;
+  padding: 10px;
+  border: none;
+  border-radius: 1px;
+}
+
+.approving {
+  display: flex;
+  align-items: center;
+  column-gap: 7.37px;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--white-1);
+}
+
+.fieldsBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .fileBtn {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    font-weight: 500;
+    font-size: 11.93px;
+    line-height: 130%;
+
+    border: none;
+    padding: 5px 10px;
+    background: var(--white-1);
+  }
+}
+
+@include tablet {
+  .fieldsBlock,
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .fieldsBlock {
+    align-items: flex-start;
+  }
+
+  .wrapper {
+    padding: 60px 30px !important;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .button {
+    padding: 14px 0 !important;
+  }
+
+  .texts {
+    row-gap: 14px;
+
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100% !important;
+    text-align: start !important;
+  }
+
+  .descipription {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: -1%;
+    text-align: start !important;
+  }
+}

@@ -1,0 +1,36 @@
+.tabs {
+  width: max-content;
+
+  display: flex;
+
+  column-gap: 7.6px;
+
+  padding: 3.67px 3.66px 4px;
+
+  background: #EEEEEF;
+  border-radius: 3px;
+
+  margin: 0 auto;
+}
+
+.tab {
+  cursor: pointer;
+
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 115%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 10px 17px;
+  border: none;
+  border-radius: 2px;
+
+  &.current {
+    background: var(--white-1);
+  }
+}
+
+

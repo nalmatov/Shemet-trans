@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  color: var(--main-blue-clr);
+}
+
+:root {
+  --main-blue-clr: #05063A;
+  --gradient-blue-clr: linear-gradient(163.15deg, #1D1DD2 -45.73%, #101047 108.39%);
+  
+  --white-1: #F9F9F9;
+  --white-2: #F6F6F6;
+  
+  --gray-1: #565656;
+  --gray-2: #E1E1E6;
+
+  h1, h2 {
+    font-family: 'Bebas Neue';
+  }
+}
+
+#root {
+  background: var(--white-1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 115%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.content {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+@include tablet {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@include tablet-portrait {
+  .container {
+    padding: 0 22px;
+  }
+}
+
+@include mobile {
+  .container {
+    padding: 0 17px;
+  }
+}
+
+// Mobile
+@include mobile {
+  h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 90%;
+    letter-spacing: 0%;
+  }
+  
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -2.5%;
+    text-transform: uppercase;
+  }
+}
