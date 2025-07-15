@@ -15,7 +15,7 @@ const schema = z.object({
   email: z.string().email('Неверный email'),
   message: z.string().min(1, 'Введите сообщение'),
   file: z.any().optional(),
-  check: z.boolean(),
+  consent: z.boolean(),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -35,8 +35,19 @@ const Calculate = () => {
   });
 
   const onSubmit = (data: FormData) => {
-    const file = (data.file as FileList | undefined)?.[0];
-    console.log({ ...data, file });
+    const formData = new FormData();
+
+    ([ 'phone', 'email', 'message', 'consent' ] as const)
+      .forEach((d) => formData.append(d, JSON.stringify(data[d])));
+
+    if (data.file) {
+      formData.append('file', data.file[0]);
+    }
+
+    fetch('http://localhost:3000/submit', {
+      method: 'post',
+      body: formData,
+    });
   };
   return (
     <section id="calculate" className={`container ${classes.calculate}`}>
@@ -87,14 +98,14 @@ const Calculate = () => {
 
           <div className={classes.fieldsBlock}>
             <label>
-              <input type="file" {...register('file')} multiple={false} hidden />
+              <input type="file" multiple={false} {...register('file')} hidden />
               <span className={classes.fileBtn}>
                 <img src={file} alt="" /> Прикрепить файл
               </span>
             </label>
 
             <label className={classes.approving}>
-              <input type="checkbox" required {...register('check')} /> Я соглашаюсь с политикой обработки данных
+              <input type="checkbox" required {...register('consent')} /> Я соглашаюсь с политикой обработки данных
             </label>
           </div>
 
