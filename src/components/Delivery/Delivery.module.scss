@@ -19,7 +19,7 @@
 
 .image {
   width: 100%;
-  height: 424px;
+  height: 33vw;
 }
 
 .about {
@@ -91,6 +91,20 @@
       width: 100%;
     }
   }
+
+  .deliveries {
+    .transfer .image {
+      display: none;
+    }
+
+    .transfer .mobImage {
+      display: block;
+    }
+
+    .tags {
+      margin: 16px 0 20px;
+    }
+  }
 }
 
 @include mobile {
@@ -108,14 +122,6 @@
 
     row-gap: 12px;
 
-    .transfer .image {
-      display: none;
-    }
-
-    .transfer .mobImage {
-      display: block;
-    }
-
     .transfer .about {
       padding: 20px;
     }
@@ -123,10 +129,6 @@
 
   .items {
     row-gap: 10px;
-  }
-
-  .tags {
-    margin: 16px 0 20px;
   }
 
   .inactive {
