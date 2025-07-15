@@ -38,10 +38,6 @@ const Calculate = () => {
     const file = (data.file as FileList | undefined)?.[0];
     console.log({ ...data, file });
   };
-
-  const handleUploadFile = () => {
-    console.log(register('file'))
-  }
   return (
     <section id="calculate" className={`container ${classes.calculate}`}>
       <div className={classes.wrapper}>
@@ -91,10 +87,10 @@ const Calculate = () => {
 
           <div className={classes.fieldsBlock}>
             <label>
-              <input type="file" {...register('file')} hidden />
-              <button onClick={handleUploadFile} className={classes.fileBtn} type='button'>
+              <input type="file" {...register('file')} multiple={false} hidden />
+              <span className={classes.fileBtn}>
                 <img src={file} alt="" /> Прикрепить файл
-              </button>
+              </span>
             </label>
 
             <label className={classes.approving}>
