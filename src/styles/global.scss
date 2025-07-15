@@ -33,7 +33,7 @@ html {
 
 h1 {
   font-weight: 700;
-  font-size: 57px;
+  font-size: 82px;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -66,7 +66,12 @@ ul, li {
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+  src: url('../assets/fonts/Bebas-Neue.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue Cyrillic';
+  src: url('../assets/fonts/Bebas-Neue.ttf') format('truetype');
 }
 
 @include tablet {
@@ -89,7 +94,7 @@ ul, li {
 
   h1 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 50.84px;
     line-height: 90%;
     letter-spacing: 0%;
   }
