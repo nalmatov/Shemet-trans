@@ -59,7 +59,7 @@ const Advantages = () => {
         }
         <li className={classes.last}>
           <p className={classes._description}>{description}</p>
-          <Button variant='outlined'>ЗАПРОСИТЬ РАСЧЕТ</Button>
+          <Button variant='outlined' link='#calculate'>ЗАПРОСИТЬ РАСЧЕТ</Button>
         </li>
       </ul>
     </section>

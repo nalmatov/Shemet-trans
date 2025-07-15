@@ -109,8 +109,8 @@
 }
 
 .closeBtn {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   position: relative;
   
 
@@ -119,7 +119,7 @@
 }
 
 .closeBtn .closeIcon {
-  width: 20px;
+  width: 30px;
 
   position: absolute;
   top: 50%;
@@ -171,5 +171,22 @@
 @include mobile {
   .header {
     height: 44px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+
+  .links {
+    row-gap: 50px !important;
+  }
+
+  .navContacts {
+    column-gap: 30px;
+
+    & li a img {
+      width: 35px;
+      height: 35px;
+    }
   }
 }

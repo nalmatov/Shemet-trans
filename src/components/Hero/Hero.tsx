@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import heroBg from '@/assets/images/hero-bg-mobile.png'
+import heroBg from '@/assets/images/hero-bg-mobile.webp'
 import classes from './Hero.module.scss';
 
 const Button = lazy(() => import('@components/Button/Button'));

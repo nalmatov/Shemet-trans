@@ -1,7 +1,7 @@
 import { type tagType } from '@components/Tag/Tag';
 import { lazy, useState } from 'react';
-import first from '@/assets/images/first-trans.png'
-import second from '@/assets/images/second-trans.png'
+import first from '@/assets/images/first-trans.webp'
+import second from '@/assets/images/second-trans.webp'
 import classes from './Delivery.module.scss';
 
 

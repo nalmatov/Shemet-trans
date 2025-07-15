@@ -59,7 +59,7 @@ ul, li {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -81,14 +81,12 @@ ul, li {
   }
 }
 
-@include mobile {
-  .container {
-    padding: 0 17px;
-  }
-}
-
 // Mobile
 @include mobile {
+  .container {
+    padding: 0 10px;
+  }
+
   h1 {
     font-weight: 700;
     font-size: 50px;
